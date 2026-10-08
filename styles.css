@@ -137,6 +137,9 @@ nav ul li a:visited, nav ul li a:active {
     border: none;
     transform: scale(1);
     transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sec-btn {
@@ -524,6 +527,15 @@ h2 {
     gap: 0.5rem;
 }
 
+#pengalaman > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
 .pengalaman-btn {
     padding: 0.8rem 1rem;
     border-radius: 50px;
@@ -540,6 +552,8 @@ h2 {
 
 .pengalaman-card {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--white-color);
     border-radius: 20px;
     border: 1px solid var(--fourth-color);
@@ -553,9 +567,17 @@ h2 {
     gap: 1rem;
 }
 
-.pengalaman-konten p {
-    font-size: 1rem;
+.pengalaman-subtitle {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--main-color); 
+    margin-bottom: 12px; /* Jarak ke paragraf deskripsi di bawahnya */
+}
+
+.pengalaman-deskripsi {
+    font-size: 0.9rem;
     color: var(--text-color2);
+    text-align: justify;
 }
 
 .btn-link {
@@ -571,15 +593,48 @@ h2 {
     gap: 1rem;
 }
 
-.pengalaman-tag-list .tag {
-    padding: 0.5rem 1rem;
+.pengalaman-tag {
+    background-color: var(--fourth-color); 
+    color: var(--main-color);
+    border: none; 
     font-size: 0.8rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 50px;
 }
 
-.pengalaman-card img {
+.pengalaman-card > div > img {
     width: 30rem;
     border-radius: 20px;
+    border: 1px solid #E2E8F0;
 }
 
+.btn-link {
+    background-color: var(--main-color);
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-link:hover {
+    transform: scale(1.02);
+}
+
+.btn-link img {
+    width: 1.5rem;
+    height: auto;
+}
+
+.btn-link a {
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: var(--white-color);
+}
 
 
