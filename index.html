@@ -15,6 +15,7 @@
             <ul>
                 <li><a href="#beranda">Beranda</a></li>
                 <li><a href="#tentang-saya">Tentang Saya</a></li>
+                <li><a href="#pendidikan">Pendidikan</a></li>
                 <li><a href="#keahlian">Keahlian</a></li>
                 <li><a href="#pengalaman">Pengalaman</a></li>
                 <li><a href="#kontak">Kontak</a></li>
@@ -74,26 +75,32 @@
                 <h2>Pendidikan</h2>
                 <p>Riwayat Studi</p>
             </div>
-            <div class="pendidikan-konten">
-                <div>
+            <div class="pendidikan-timeline">
+                <div class="pendidikan-item">
                     <p class="pendidikan-tahun">2022 - 2025</p>
                     <div class="pendidikan-dot"></div>
                     <div class="pendidikan-card">
                         <p class="pendidikan-jenjang">SEKOLAH MENENGAH KEJURUAN</p>
-                        <h3>SMK Kristen Petra</h3>
-                        <p class="pendidikan-jurusan">Jurusan Teknik Komputer dan Jaringan</p>
-                        <p class="pendidikan-sub">Mempelajari dasar-dasar konfigurasi jaringan, konfirugasi mikrotik, linux, keamanan jaringan, perangkat keras komputer</p>
+                        <div>
+                            <img src="img/petra.png" alt="Logo Petra">
+                            <h3>SMK Kristen Petra</h3>
+                            <p class="pendidikan-jurusan">Jurusan Teknik Komputer dan Jaringan</p>
+                        </div>
+                        <p class="pendidikan-sub">Mempelajari dasar-dasar konfigurasi jaringan, sistem operasi, keamanan jaringan dan perangkat keras komputer</p>
                     </div>
                 </div>
-                <div>
-                    <p class="pendidikan-tahun">2025 - Sekarang</p>
-                    <div class="pendidikan-dot"></div>
-                    <div class="pendidikan-card">
+                <div class="pendidikan-item">
+                    <p class="pendidikan-tahun active">2025 - Sekarang</p>
+                    <div class="pendidikan-dot active"></div>
+                    <div class="pendidikan-card border-blue">
                         <p class="pendidikan-jenjang">PERGURUAN TINGGI</p>
-                        <h3>Institut Teknologi Adhi Tama Surabaya (ITATS)</h3>
-                        <p class="pendidikan-jurusan">Jurusan Teknik Informatika</p>
-                        <p class="pendidikan-sub">Mendalami pemrograman terstruktur, struktur data, pengembangan web frontend, serta perancangan antarmuka pengguna (UI/UX)</p>
-                    </div>
+                        <div>
+                            <img src="img/itats.png" alt="Logo ITATS">
+                            <h3>Institut Teknologi Adhi Tama Surabaya (ITATS)</h3>
+                            <p class="pendidikan-jurusan">Jurusan Teknik Informatika</p>
+                        </div>
+                        <p class="pendidikan-sub">Mempelajari dasar-dasar algoritma pemrograman, struktur data, manajemen basis data, pengembangan web modern, dan desain antarmuka pengguna</p>
+                    </div>  
                 </div>
             </div>
         </section>
@@ -120,7 +127,7 @@
                     </button>
                     <button class="keahlian-btn" data-filter="uiux">
                         <div>
-                            <div class="icon"><img src="img/layer.png" alt="Layer Icon"></div>
+                            <div class="icon" style="font-size: 1.2rem;">🛠</div>
                             <p>UI/UX & Tools</p>
                         </div>
                         <p class="arrow">→</p>
@@ -202,7 +209,34 @@
             </div>
         </section>
         <section id="pengalaman">
-            <h2>Pengalaman</h2>
+            <div class="title">
+                <h2>Pengalaman</h2>
+                <p>Rekam jejak praktik industri, karya proyek, dan sertifikasi</p>
+            </div>
+            <div class="pengalaman-filter">
+                <button class="pengalaman-btn active" data-filter="projek-lomba">Projek & Lomba</button>
+                <button class="pengalaman-btn" data-filter="magang">Magang</button>
+                <button class="pengalaman-btn" data-filter="sertifikat">Sertifikat</button>
+            </div>
+            <div class="pengalaman-list">
+                <div class="pengalaman-card">
+                    <div>
+                        <img src="img/parkova.png" alt="Parkova Prototype">
+                    </div>
+                    <div class="pengalaman-konten">
+                        <div class="pengalaman-tag-list">
+                            <div class="tag">UI/UX</div>
+                            <div class="tag">Figma Prototype</div>
+                            <div class="tag">Android Mobile App</div>
+                        </div>
+                        <div>
+                            <h3>Parkova</h3>
+                            <p>Merancang alur pengguna (user flow), wireframe, hingga interactive prototype pada kompetisi [Nama Lomba] untuk memberikan solusi atas [masalah yang diangkat].</p>
+                        </div>
+                        <div class="sec-btn"><a href="">Lihat Prototype</a></div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="kontak">
             <h2>Kontak</h2>
