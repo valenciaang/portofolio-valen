@@ -518,7 +518,7 @@ h2 {
 /* PENGALAMAN */
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 #pengalaman {
@@ -547,6 +547,11 @@ h2 {
     border-radius: 50px;
     background-color: var(--white-color);
     border: 1px solid var(--fourth-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.pengalaman-btn:hover {
+    border-color: var(--main-color);
 }
 
 .pengalaman-list {
@@ -619,6 +624,11 @@ h2 {
     border: 1px solid #E2E8F0;
 }
 
+.btn-list {
+    display: flex;
+    gap: 0.5rem;
+}
+
 .btn-link {
     background-color: var(--main-color);
     color: var(--white-color);
@@ -634,6 +644,12 @@ h2 {
     gap: 0.5rem;
     transform: scale(1);
     transition: all 0.3s ease-in-out;
+}
+
+.sec-btn-link {
+    background-color: var(--white-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
 }
 
 .btn-link:hover {

@@ -48,7 +48,7 @@
     <main>
         <section id="tentang-saya">
             <div class="polaroid">
-                <img src="img/foto-valen2.jpeg" alt="Foto Valen">
+                <img src="img/pas-foto.jpg" alt="Foto Valen">
             </div>
             <div class="konten">
                 <h2>Halo, Saya <span class="text-blue bold">Valen</span></h2>
@@ -215,24 +215,46 @@
             </div>
             <div>
                 <div class="pengalaman-filter">
-                    <button class="pengalaman-btn active" data-filter="projek-lomba">Projek & Lomba</button>
+                    <button class="pengalaman-btn active" data-filter="proyek-lomba">Proyek & Lomba</button>
                     <button class="pengalaman-btn" data-filter="magang">Magang</button>
                     <button class="pengalaman-btn" data-filter="sertifikat">Sertifikat</button>
                 </div>
                 <div class="pengalaman-list">
-                    <div class="pengalaman-card">
+                    <div class="pengalaman-card hidden" data-content="magang">
+                        <div>
+                            <img src="img/sertifikat-pkl.png" alt="Sertifikat PKL">
+                        </div>
+                        <div class="pengalaman-konten">
+                            <p class="pengalaman-tanggal">2024 (6 Bulan)</p>
+                            <div class="pengalaman-tag-list">
+                                <div class="pengalaman-tag">Quality Control</div>
+                                <div class="pengalaman-tag">Finishing</div>
+                                <div class="pengalaman-tag">Data Entry</div>
+                            </div>
+                            <div>
+                                <h3>Solaris Digital Print & Offset</h3>
+                                <p class="pengalaman-subtitle">Praktik Kerja Lapangan (PKL) - Finishing & QC</p>
+                                <p class="pengalaman-deskripsi">Terlibat langsung dalam siklus produksi industri percetakan, mulai dari operasional mesin (cutting die cut, kiss cut, laminasi) hingga proses finishing produk. Bertanggung jawab melakukan Quality Control (QC) untuk memastikan material sesuai standar kualitas, serta mengelola input data keuangan harian ke dalam sistem untuk mendukung pencapaian target produksi tim</p>
+                            </div>
+                            <a class="btn-link" href="https://drive.google.com/drive/folders/1CqqjoNws3LqN7gIq4o88PAFt9F_er_Kp?usp=sharing" target="_blank">
+                                <!-- <img src="img/figma.png" alt="Figma"> -->
+                                Lihat Sertifikat dan Laporan ↗
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pengalaman-card" data-content="proyek-lomba">
                         <div>
                             <img src="img/perpustakaan.png" alt="Website Perpustakaan">
                         </div>
                         <div class="pengalaman-konten">
-                            <p class="pengalaman-tanggal">2024 (6 Bulan)</p>
+                            <p class="pengalaman-tanggal">Agustus - Oktober 2026</p>
                             <div class="pengalaman-tag-list">
                                 <div class="pengalaman-tag">Web Development</div>
                                 <div class="pengalaman-tag">Dashboard Admin</div>
                                 <div class="pengalaman-tag">Sistem Perpustakaan</div>
                             </div>
                             <div>
-                                <h3>Solaris Digital Print & Offset</h3>
+                                <h3>Sistem Perpustakaan SMA Negeri 14 Surabaya</h3>
                                 <p class="pengalaman-subtitle">Sistem Informasi & Dashboard Manajemen Perpustakaan Sekolah</p>
                                 <p class="pengalaman-deskripsi">Berperan sebagai Frontend Developer untuk sistem manajemen perpustakaan SMA Negeri 14 Surabaya. Bertanggung jawab mengimplementasikan desain UI/UX menjadi antarmuka dashboard yang interaktif, serta melakukan integrasi data dari backend ke frontend untuk memastikan sinkronisasi data berjalan dengan baik</p>
                             </div>
@@ -242,29 +264,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="pengalaman-card">
-                        <div>
-                            <img src="img/perpustakaan.png" alt="Website Perpustakaan">
-                        </div>
-                        <div class="pengalaman-konten">
-                            <p class="pengalaman-tanggal">Agustus - Oktober 2026</p>
-                            <div class="pengalaman-tag-list">
-                                <div class="pengalaman-tag">Quality Control</div>
-                                <div class="pengalaman-tag">Finishing</div>
-                                <div class="pengalaman-tag">Data Entry</div>
-                            </div>
-                            <div>
-                                <h3>Sistem Perpustakaan SMA Negeri 14 Surabaya</h3>
-                                <p class="pengalaman-subtitle">Praktik Kerja Lapangan (PKL) — Bagian Finishing & QC</p>
-                                <p class="pengalaman-deskripsi">Terlibat langsung dalam siklus produksi industri percetakan, mulai dari operasional mesin (cutting die cut, kiss cut, laminasi) hingga proses finishing produk. Bertanggung jawab melakukan Quality Control (QC) untuk memastikan material sesuai standar kualitas, serta mengelola input data keuangan harian ke dalam sistem untuk mendukung pencapaian target produksi tim</p>
-                            </div>
-                            <a class="btn-link" href="https://pbo24itats.co-id.id/Perpustakaan/" target="_blank">
-                                <!-- <img src="img/figma.png" alt="Figma"> -->
-                                Lihat Sertifikat ↗
-                            </a>
-                        </div>
-                    </div>
-                    <div class="pengalaman-card">
+                    <div class="pengalaman-card" data-content="proyek-lomba">
                         <div>
                             <img src="img/parkova.png" alt="Parkova Prototype">
                         </div>
@@ -286,7 +286,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="pengalaman-card">
+                    <div class="pengalaman-card" data-content="proyek-lomba">
                         <div>
                             <img src="img/barter-go.png" alt="Barter Go Prototype">
                         </div>
@@ -308,51 +308,51 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pengalaman-card">
+                    <div class="pengalaman-card" data-content="proyek-lomba">
                         <div>
-                            <img src="img/barter-go.png" alt="Barter Go Prototype">
+                            <img src="img/icetsd.png" alt="ICETSD"  >
                         </div>
                         <div class="pengalaman-konten">
-                            <p class="pengalaman-tanggal">September 2026</p>
+                            <p class="pengalaman-tanggal">Juli 2026</p>
                             <div class="pengalaman-tag-list">
-                                <div class="pengalaman-tag">UI/UX</div>
+                                <div class="pengalaman-tag">Internasional</div>
                                 <div class="pengalaman-tag">Figma Prototype</div>
                                 <div class="pengalaman-tag">Android Mobile App</div>
                             </div>
                             <div>
-                                <h3>ICETSD</h3>
-                                <p class="pengalaman-subtitle">Peserta - Aplikasi Barter untuk Penggunaan Kembali Barang Bekas</p>
-                                <p class="pengalaman-deskripsi">Merancang alur pengguna (user flow), wireframe, hingga interactive prototype pada kompetisi UI/UX Design Udayana untuk mengatasi kendala pencarian lahan parkir di area perkotaan melalui fitur pemantauan slot real-time dan navigasi interaktif</p>
+                                <h3>Silver Award Internasional - ICETSD 2026 Malaysia</h3>
+                                <p class="pengalaman-subtitle">Proyek "AURA": An IoT Integrated Philanthropy Platform</p>
+                                <p class="pengalaman-deskripsi">Meraih Silver Award pada ajang kompetisi inovasi tingkat internasional (ICETSD 2026) di Malaysia. Berperan dalam menyusun abstrak kompetisi untuk "AURA" sebuah platform filantropi terintegrasi IoT yang dirancang untuk memantau dan melacak distribusi bantuan secara cerdas dan transparan</p>
                             </div>
-                            <div class="btn-link" href="https://www.figma.com/proto/mRgbIef1mhSR4PNXEttx6c/UX-Design-Udayana" target="_blank">
+                            <!-- <div class="btn-link" href="https://www.figma.com/proto/mRgbIef1mhSR4PNXEttx6c/UX-Design-Udayana" target="_blank">
                                 <img src="img/figma.png" alt="Figma">
                                 Lihat Prototype ↗
-                            </div>
+                            </div> -->
                         </div>
                     </div>
-                    <div class="pengalaman-card">
+                    <div class="pengalaman-card" data-content="proyek-lomba">
                         <div>
-                            <img src="img/barter-go.png" alt="Barter Go Prototype">
+                            <img src="img/indoceiss.png" alt="IndoCEISS">
                         </div>
                         <div class="pengalaman-konten">
-                            <p class="pengalaman-tanggal">September 2026</p>
+                            <p class="pengalaman-tanggal">Juli 2026</p>
                             <div class="pengalaman-tag-list">
                                 <div class="pengalaman-tag">Nasional</div>
                                 <div class="pengalaman-tag">Short Movie</div>
                                 <div class="pengalaman-tag">Talent</div>
                             </div>
                             <div>
-                                <h3>Juara 2 Nasional — Short Movie Competition</h3>
+                                <h3>Juara 2 Nasional - Short Movie Competition</h3>
                                 <p class="pengalaman-subtitle">Rakernas IndoCEISS 2026 - Tim "Quadra" ITATS</p>
                                 <p class="pengalaman-deskripsi">Meraih Juara 2 tingkat nasional bersama tim 'Quadra' ITATS pada kompetisi film pendek Rakernas IndoCEISS 2026. Berperan sebagai Talent (Aktor) yang bertugas menghidupkan karakter cerita dan menyampaikan pesan inovasi digital secara ekspresif kepada audiens, didukung dengan kemampuan komunikasi dan kolaborasi tim yang solid</p>
                             </div>
-                            <div class="btn-link" href="https://www.figma.com/proto/mRgbIef1mhSR4PNXEttx6c/UX-Design-Udayana" target="_blank">
-                                <img src="img/figma.png" alt="Figma">
-                                Lihat Prototype ↗
+                            <div class="btn-link" href="https://youtu.be/S8gQ2Uwz3IE?si=YGRNDvC8eYmH2NwD" target="_blank">
+                                <!-- <img src="img/figma.png" alt="Figma"> -->
+                                Lihat Video ↗
                             </div>
                         </div>
                     </div>
-                    <div class="pengalaman-card">
+                    <div class="pengalaman-card" data-content="proyek-lomba">
                         <div>
                             <img src="img/icc-program.png" alt="Parkova Prototype">
                         </div>
@@ -363,14 +363,165 @@
                                 <div class="pengalaman-tag">C++</div>
                             </div>
                             <div>
-                                <h3>Informatics Coding Competition (ICC) 2025</h3>
+                                <h3>Informatics Coding Competition (ICC) 2026</h3>
                                 <p class="pengalaman-subtitle">Juara 1 - Kompetisi Pemograman Terstruktur</p>
                                 <p class="pengalaman-deskripsi">Memecahkan berbagai studi kasus algoritma pada kompetisi ICC Institut Teknologi Adhi Tama Surabaya (ITATS), mengimplementasikan logika pemrograman terstruktur dan optimasi kode untuk menyelesaikan tantangan komputasi dalam batas waktu yang ditentukan</p>
                             </div>
-                            <a href="https://github.com/valenciaang/ICC_2026_Enak_e_opo_yo" target="_blank" class="btn-link">
-                                <img src="img/github.png" alt="Github">
-                                Lihat Program ↗
-                            </a>
+                            <div class="btn-list">
+                                <a  class="btn-link" href="https://github.com/valenciaang/ICC_2026_Enak_e_opo_yo" target="_blank">
+                                    <img src="img/github.png" alt="Github">
+                                    Lihat Program ↗
+                                </a>
+                                <a class="btn-link sec-btn-link" href="https://drive.google.com/drive/folders/1Qi6D5COhi17qPL-IYD-V-H-0lwpNH7eC?usp=sharing" target="_blank">
+                                    <!-- <img src="img/figma.png" alt="Figma"> -->
+                                    Lihat Sertifikat ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pengalaman-card hidden" data-content="sertifikat">
+                        <div>
+                            <img src="img/sertifikat-react.png" alt="Sertifikat React">
+                        </div>
+                        <div class="pengalaman-konten">
+                            <p class="pengalaman-tanggal">Juni 2026</p>
+                            <div class="pengalaman-tag-list">
+                                <div class="pengalaman-tag">React.js</div>
+                                <div class="pengalaman-tag">Front-End</div>
+                                <div class="pengalaman-tag">Dicoding</div>
+                            </div>
+                            <div>
+                                <h3>Belajar Membuat Aplikasi Web dengan React</h3>
+                                <p class="pengalaman-subtitle">Coding Camp 2026 powered by DBS Foundation 2.0 - Dicoding</p>
+                                <p class="pengalaman-deskripsi">Mempelajari materi pengenalan React, konsep dasar React, React UI Component, Stateful Component dan mengerjakan Proyek Akhir</p>
+                            </div>
+                            <div class="btn-list">
+                                <a  class="btn-link" href="https://www.dicoding.com/certificates/ERZRLO3RNZYV" target="_blank">
+                                    <!-- <img src="img/github.png" alt="Github"> -->
+                                    Lihat Sertifikat ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pengalaman-card hidden" data-content="sertifikat">
+                        <div>
+                            <img src="img/sertifikat-frontend.png" alt="Sertifikat Front-End">
+                        </div>
+                        <div class="pengalaman-konten">
+                            <p class="pengalaman-tanggal">Mei 2026</p>
+                            <div class="pengalaman-tag-list">
+                                <div class="pengalaman-tag">Front-End</div>
+                                <div class="pengalaman-tag">Dicoding</div>
+                            </div>
+                            <div>
+                                <h3>Belajar Membuat Front-End Web untuk Pemula</h3>
+                                <p class="pengalaman-subtitle">Coding Camp 2026 powered by DBS Foundation 2.0 - Dicoding</p>
+                                <p class="pengalaman-deskripsi">Mempelajari materi Browser Object Model (BOM) dan Document Object Model (DOM), penerapan event, penyimpanan data dengan Web Storagr dan mengerjakan Proyek Akhir</p>
+                            </div>
+                            <div class="btn-list">
+                                <a  class="btn-link" href="https://www.dicoding.com/certificates/07Z67YNORPQR" target="_blank">
+                                    <!-- <img src="img/github.png" alt="Github"> -->
+                                    Lihat Sertifikat ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pengalaman-card hidden" data-content="sertifikat">
+                        <div>
+                            <img src="img/sertifikat-javascript.png" alt="Sertifikat JavaScript">
+                        </div>
+                        <div class="pengalaman-konten">
+                            <p class="pengalaman-tanggal">Maret 2026</p>
+                            <div class="pengalaman-tag-list">
+                                <div class="pengalaman-tag">JavaScript</div>
+                                <div class="pengalaman-tag">Front-End</div>
+                                <div class="pengalaman-tag">Dicoding</div>
+                            </div>
+                            <div>
+                                <h3>Belajar Dasar Pemrograman JavaScript</h3>
+                                <p class="pengalaman-subtitle">Coding Camp 2026 powered by DBS Foundation 2.0 - Dicoding</p>
+                                <p class="pengalaman-deskripsi">Mempelajari materi dasar pemograman JavaScript, struktur data, OOP, Functional Programming, Asynchronous Process dan mengerjakan Proyek Akhir</p>
+                            </div>
+                            <div class="btn-list">
+                                <a  class="btn-link" href="https://www.dicoding.com/certificates/JMZVO1N73XN9" target="_blank">
+                                    <!-- <img src="img/github.png" alt="Github"> -->
+                                    Lihat Sertifikat ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pengalaman-card hidden" data-content="sertifikat">
+                        <div>
+                            <img src="img/sertifikat-javascript.png" alt="Sertifikat JavaScript">
+                        </div>
+                        <div class="pengalaman-konten">
+                            <p class="pengalaman-tanggal">Maret 2026</p>
+                            <div class="pengalaman-tag-list">
+                                <div class="pengalaman-tag">HTML</div>
+                                <div class="pengalaman-tag">CSS</div>
+                                <div class="pengalaman-tag">Front-End</div>
+                                <div class="pengalaman-tag">Dicoding</div>
+                            </div>
+                            <div>
+                                <h3>Belajar Dasar Pemrograman Web</h3>
+                                <p class="pengalaman-subtitle">Coding Camp 2026 powered by DBS Foundation 2.0 - Dicoding</p>
+                                <p class="pengalaman-deskripsi">Mempelajari materi dasar HTML, CSS, teknik layouting menggunakan Flexbox dan mengerjakan Proyek Akhir</p>
+                            </div>
+                            <div class="btn-list">
+                                <a  class="btn-link" href="https://www.dicoding.com/certificates/MEPJOJLEWZ3V" target="_blank">
+                                    <!-- <img src="img/github.png" alt="Github"> -->
+                                    Lihat Sertifikat ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pengalaman-card hidden" data-content="sertifikat">
+                        <div>
+                            <img src="img/sertifikat-freecodecamp-js.png" alt="Sertifikat freeCodeCamp JavaScript">
+                        </div>
+                        <div class="pengalaman-konten">
+                            <p class="pengalaman-tanggal">Agustus 2025</p>
+                            <div class="pengalaman-tag-list">
+                                <div class="pengalaman-tag">JavaScript</div>
+                                <div class="pengalaman-tag">Fetch API & JSON</div>
+                                <div class="pengalaman-tag">freeCodeCamp</div>
+                            </div>
+                            <div>
+                                <h3>Legacy JavaScript Algorithms and Data Structures V8</h3>
+                                <p class="pengalaman-subtitle">JavaScript Certification - freeCodeCamp</p>
+                                <p class="pengalaman-deskripsi">Mempelajari materi fundamental JavaScript (ES6+), algoritma, dan manipulasi struktur data, penerapan penyimpanan data dengan Local Storage dan pengambilan data JSON menggunakan Fetch API, dab mengerjakan Proyek Akhir</p>
+                            </div>
+                            <div class="btn-list">
+                                <a  class="btn-link" href="https://www.freecodecamp.org/certification/valenciaangelique/javascript-algorithms-and-data-structures-v8" target="_blank">
+                                    <!-- <img src="img/github.png" alt="Github"> -->
+                                    Lihat Sertifikat ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pengalaman-card hidden" data-content="sertifikat">
+                        <div>
+                            <img src="img/sertifikat-freecodecamp-web.png" alt="Sertifikat freeCodeCamp Web Design">
+                        </div>
+                        <div class="pengalaman-konten">
+                            <p class="pengalaman-tanggal">Juni 2025</p>
+                            <div class="pengalaman-tag-list">
+                                <div class="pengalaman-tag">HTML</div>
+                                <div class="pengalaman-tag">CSS</div>
+                                <div class="pengalaman-tag">Responsive Design</div>
+                                <div class="pengalaman-tag">freeCodeCamp</div>
+                            </div>
+                            <div>
+                                <h3>Legacy Responsive Web Design V8</h3>
+                                <p class="pengalaman-subtitle">Responsive Web Design Certification - freeCodeCamp</p>
+                                <p class="pengalaman-deskripsi">Mempelajari materi fundamental struktur web dengan HTML dan styling menggunakan CSS, penerapan desain responsif melalui Flexbox dan Media Queries agar antarmuka menyesuaikan ukuran layar, dan mengerjakan Proyek Akhir</p>
+                            </div>
+                            <div class="btn-list">
+                                <a  class="btn-link" href="https://www.freecodecamp.org/certification/valenciaangelique/responsive-web-design" target="_blank">
+                                    <!-- <img src="img/github.png" alt="Github"> -->
+                                    Lihat Sertifikat ↗
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -408,6 +559,27 @@
 
                     const selectedCategory = btn.getAttribute('data-filter');
                     filterSkills(selectedCategory);
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const pengalamanBtn = document.querySelectorAll('.pengalaman-btn');
+            const pengalamanCards = document.querySelectorAll('.pengalaman-card');
+
+            pengalamanBtn.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    pengalamanBtn.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const targetCategory = btn.getAttribute('data-filter');
+                    pengalamanCards.forEach(card => {
+                        if (card.getAttribute('data-content') === targetCategory) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
                 });
             });
         });
