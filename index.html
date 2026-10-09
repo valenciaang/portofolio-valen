@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='[https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css](https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css)' rel='stylesheet'>    
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,8 +26,8 @@
             <h1>Valencia Angelique<br>Gondowidjojo</h1>
             <p>Mahasiswa Teknik Informatika ITATS Angkatan 2025</p>
             <div>
-                <button class="main-btn">Tentang Saya</button>
-                <button class="sec-btn">Hubungi Saya</button>
+                <a href="#tentang-saya" class="main-btn">Tentang Saya</a>
+                <a href="#kontak" class="sec-btn">Hubungi Saya</a>
             </div>
         </section>
         <div class="header-line">
@@ -52,8 +53,8 @@
             </div>
             <div class="konten">
                 <h2>Halo, Saya <span class="text-blue bold">Valen</span></h2>
-                <p>Saya merupakan mahasiswa aktif Program Studi <span class="text-blue bold">Teknik Informatika</span> di <span class="bold">Institut Teknologi Adhi Tama Surabaya (ITATS)</span>. Memiliki antusiasme mendalam dalam bidang rekayasa web frontend, perancangan estetika antarmuka pengguna (UI/UX), serta pengembangan sistem perangkat lunak yang responsif, intuitif, dan fungsional.</p>
-                <p>Berbekal kedisiplinan dan rasa ingin tahu yang tinggi, saya senantiasa mengeksplorasi ekosistem web modern untuk menciptakan produk digital yang tidak hanya berpenampilan memikat, namun juga memberikan solusi nyata atas kebutuhan pengguna.</p>
+                <p>Saya merupakan mahasiswa aktif Program Studi <span class="text-blue bold">Teknik Informatika</span> di <span class="bold">Institut Teknologi Adhi Tama Surabaya (ITATS)</span>. Memiliki antusiasme mendalam dalam pengembangan web frontend, perancangan antarmuka pengguna (UI/UX), serta pengembangan sistem perangkat lunak.</p>
+                <p>Saya memiliki kedisiplinan dan rasa ingin tahu yang tinggi, mengikuti perkembangan web modern untuk mengembangkan perangkat lunak yang tidak hanya menarik, namun juga memberikan solusi nyata atas kebutuhan pengguna.</p>
                 <div>
                     <div class="card" >
                         <p>Status</p>
@@ -106,7 +107,7 @@
         </section>
         <section id="keahlian">
             <div class="title">
-                <h2>Keahlian</h2>
+                <h2>Keahlian & Hobi</h2>
                 <p>Teknologi dan perangkat yang saya gunakan untuk merancang perangkat lunak</p>
             </div>
             <div class="keahlian-konten">
@@ -136,6 +137,13 @@
                         <div>
                             <div class="icon">✦</div>
                             <p>Soft Skills</p>
+                        </div>
+                        <p class="arrow">→</p>
+                    </button>
+                    <button class="keahlian-btn" data-filter="hobi">
+                        <div>
+                            <div class="icon">✦</div>
+                            <p>Hobi</p>
                         </div>
                         <p class="arrow">→</p>
                     </button>
@@ -205,6 +213,18 @@
                         <!-- <img src="" alt=""> -->
                         <p>Bahasa Inggris</p>
                     </div>
+                    <div class="tag" data-category="hobi">
+                        <!-- <img src="" alt=""> -->
+                        <p>Bermain badminton</p>
+                    </div>
+                    <div class="tag" data-category="hobi">
+                        <!-- <img src="" alt=""> -->
+                        <p>Menonton Drama Korea dan Anime</p>
+                    </div>
+                    <div class="tag" data-category="hobi">
+                        <!-- <img src="" alt=""> -->
+                        <p>Bermain game</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -215,9 +235,9 @@
             </div>
             <div>
                 <div class="pengalaman-filter">
-                    <button class="pengalaman-btn active" data-filter="proyek-lomba">Proyek & Lomba</button>
-                    <button class="pengalaman-btn" data-filter="magang">Magang</button>
-                    <button class="pengalaman-btn" data-filter="sertifikat">Sertifikat</button>
+                    <button class="pengalaman-btn active" data-filter="proyek-lomba">Proyek & Lomba (6)</button>
+                    <button class="pengalaman-btn" data-filter="magang">Magang (1)</button>
+                    <button class="pengalaman-btn" data-filter="sertifikat">Sertifikat (6)</button>
                 </div>
                 <div class="pengalaman-list">
                     <div class="pengalaman-card hidden" data-content="magang">
@@ -528,10 +548,82 @@
             </div>
         </section>
         <section id="kontak">
-            <h2>Kontak</h2>
+            <div class="kontak-info-card">
+                <div>
+                    <h2>Hubungi Saya</h2>
+                    <p>Saya selalu terbuka untuk peluang kerja sama dan proyek IT</p>
+                </div>
+                <div class="kontak-list">
+                    <a href="https://wa.me/62895396281397" target="_blank" class="info-item">
+                        <div class="icon-box">
+                            <img src="img/whatsapp.png" alt="WhatsApp">
+                        </div>
+                        <div class="info-text">
+                            <p>WhatsApp</p>
+                            <p>+62 895 3962 81397</p>
+                        </div>
+                    </a>
+
+                    <a href="mailto:valencia.angeliqueg28@gmail.com" target="_blank" class="info-item">
+                        <div class="icon-box">
+                            <img src="img/gmail.png" alt="Gmail">
+                        </div>
+                        <div class="info-text">
+                            <p>Email</p>
+                            <p>valencia.angeliqueg28@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/leniivl/" target="_blank" class="info-item">
+                        <div class="icon-box">
+                            <img src="img/instagram.png" alt="Instagram">
+                        </div>
+                        <div class="info-text">
+                            <p>Instagram</p>
+                            <p>leniivl</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/valenciaang" target="_blank" class="info-item">
+                        <div class="icon-box">
+                            <img src="img/github.png" alt="Github">
+                        </div>
+                        <div class="info-text">
+                            <p>Github</p>
+                            <p>valenciaang</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="kontak-form">
+                <form action="">
+                    <div>
+                        <label for="nama">Nama</label>
+                        <input type="text" name="nama" id="nama" placeholder="Masukkan nama Anda">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Masukkan email Anda">
+                    </div>
+                    <div>
+                        <label for="no_telp">No. Telepon</label>
+                        <input type="text" name="no_telp" id="no_telp" placeholder="Masukkan nomor telepon Anda">
+                    </div>
+                    <div>
+                        <label for="pesan">Pesan</label>
+                        <textarea name="pesan" id="pesan" placeholder="Ketik pesanmu disini..."></textarea>
+                    </div>
+                    <button type="submit" class="main-btn">Kirim</button>
+                </form>
+            </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 Valencia Angelique Gondowidjojo. All Rights Reserved.</p>
+            <p class="footer-dev">Developed by Valen</p>
+        </div>
+    </footer>
     <script>
         const keahlianBtns = document.querySelectorAll('.keahlian-btn');
         const tags = document.querySelectorAll('.tag');
