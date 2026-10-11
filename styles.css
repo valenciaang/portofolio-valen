@@ -1,9 +1,4 @@
-*, *::after, *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-
+:root {
     --bg-color: #F4F4F4;
     --white-color: #FFF;
     --gray-color: #d3d3d3;
@@ -15,20 +10,26 @@
     --text-color2: #4C4C4C;
 }
 
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  * {
+  html {
     scroll-behavior: smooth;
+    scroll-padding-top: 120px;
   }
 }
 
-html {
-    scroll-padding-top: 120px;
-}
 
 body {
     background-color: var(--bg-color);
     font-family: 'Inter', sans-serif;
 }
+
+/* HEADER */
 
 header {
     margin: 1rem 0;
@@ -115,9 +116,7 @@ nav ul li a:visited, nav ul li a:active {
     font-weight: 700;
     text-align: center;
     background: linear-gradient(45deg, #7899ff 0%, #1F51DC 51%, #0526B3 100%);
-    -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
     color: transparent;
 }
 
@@ -165,6 +164,7 @@ button {
     cursor: pointer;
 }
 
+
 section {
     margin: 3rem 0;
     padding: 0 150px;
@@ -178,6 +178,36 @@ h2 {
     font-size: 2rem;
     color: var(--text-color1);
 }
+
+.text-blue {
+    color: var(--main-color);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.text-gray {
+    color: var(--gray-color);
+}
+
+.border-blue {
+    border: 1px solid var(--main-color) !important;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color1);
+}
+
+.title p {
+    color: var(--text-color2);
+}
+
+/* TENTANG SAYA */
 
 #tentang-saya {
     background-color: var(--bg-color);
@@ -200,18 +230,6 @@ h2 {
 #tentang-saya img {
     width: 300px;
     height: auto;
-}
-
-.text-blue {
-    color: var(--main-color);
-}
-
-.bold {
-    font-weight: 700;
-}
-
-.text-gray {
-    color: var(--gray-color);
 }
 
 .konten {
@@ -256,6 +274,7 @@ h2 {
 }
 
 /* PENDIDIKAN */
+
 #pendidikan {
     width: 100%;
     flex-direction: column;
@@ -335,7 +354,7 @@ h2 {
     transition: all 0.3s ease-in-out;
 }
 
-.pendidikan-card:hover {
+.pendidikan-item:hover .pendidikan-card {
     transform: translateY(-5px);
     border: 1px solid var(--sec-color);
 }
@@ -370,10 +389,6 @@ h2 {
     color: var(--text-color2);
 }
 
-.border-blue {
-    border: 1px solid var(--main-color) !important;
-}
-
 /* KEAHLIAN */
 
 #keahlian {
@@ -384,18 +399,6 @@ h2 {
 #keahlian .title {
     width: 100%;
     align-items: start;
-}
-
-.title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-color1);
-}
-
-.title p {
-    color: var(--text-color2);
 }
 
 .keahlian-konten {
@@ -672,6 +675,7 @@ h2 {
 }
 
 /* KONTAK */
+
 #kontak {
     display: flex;
     align-items: stretch;
@@ -776,12 +780,12 @@ form div label {
 }
 
 form div input, form div textarea {
+    font-family: inherit;
     padding: 1rem;
-    background-color: transparent;
+    background-color: var(--white-color);
     border-radius: 50px;
     border: 1px solid var(--gray-color);
 }
-
 
 form div textarea {
     height: 100%;
@@ -826,5 +830,5 @@ footer p {
 
 footer .footer-dev {
     font-size: 0.8rem;
-    color: #94A3B8; 
+    color: var(--main-color); 
 }
