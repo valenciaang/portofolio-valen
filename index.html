@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="mobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -12,7 +13,8 @@
 <body>
     <header id="beranda">
         <nav>
-            <ul>
+            <button class="nav-toggle" type="button">☰</button>
+            <ul class="hidden" id="nav-menu">
                 <li><a href="#beranda">Beranda</a></li>
                 <li><a href="#tentang-saya">Tentang Saya</a></li>
                 <li><a href="#pendidikan">Pendidikan</a></li>
@@ -46,7 +48,7 @@
         </div>
     </header>
     <main>
-        <section id="tentang-saya">
+        <section id="tentang-saya" >
             <div class="polaroid">
                 <img src="img/pas-foto.jpg" alt="Foto Valen">
             </div>
@@ -70,7 +72,7 @@
                 </div>
             </div>
         </section>
-        <section id="pendidikan">
+        <section id="pendidikan" class="hidden">
             <div class="title">
                 <h2>Pendidikan</h2>
                 <p>Riwayat Studi</p>
@@ -104,7 +106,7 @@
                 </div>
             </div>
         </section>
-        <section id="keahlian">
+        <section id="keahlian" class="hidden">
             <div class="title">
                 <h2>Keahlian & Hobi</h2>
                 <p>Teknologi dan perangkat yang saya gunakan untuk merancang perangkat lunak</p>
@@ -227,7 +229,7 @@
                 </div>
             </div>
         </section>
-        <section id="pengalaman">
+        <section id="pengalaman" class="hidden">
             <div class="title">
                 <h2>Pengalaman</h2>
                 <p>Rekam jejak praktik industri, karya proyek, dan sertifikasi</p>
@@ -296,7 +298,7 @@
                             </div>
                             <div>
                                 <h3>Parkova</h3>
-                                <p class="pengalaman-subtitle">Final - Aplikasi Smart Parking & Pemantauan Slot Parkir</p>
+                                <p class="pengalaman-subtitle">Best Prototype - Aplikasi Smart Parking & Pemantauan Slot Parkir</p>
                                 <p class="pengalaman-deskripsi">Merancang alur pengguna (user flow), wireframe, hingga interactive prototype pada kompetisi UI/UX Design Universitas Muria Kudus untuk mengatasi kendala pencarian lahan parkir di area perkotaan melalui fitur pemantauan slot real-time dan navigasi interaktif</p>
                             </div>
                             <a class="btn-link" href="https://www.figma.com/proto/OVwAo5QZjZmbJO6BFZLpTF/UIUX-UMK" target="_blank">
@@ -546,7 +548,7 @@
                 </div>
             </div>
         </section>
-        <section id="kontak">
+        <section id="kontak" class="hidden">
             <div class="kontak-info-card">
                 <div>
                     <h2>Hubungi Saya</h2>
@@ -617,7 +619,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="hidden">
         <div class="footer-content">
             <p>© 2026 Valencia Angelique Gondowidjojo. All Rights Reserved.</p>
             <p class="footer-dev">Developed by Valen</p>
@@ -655,6 +657,22 @@
         });
 
         document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.nav-toggle');
+            const menu = document.getElementById('nav-menu');
+
+            toggle.addEventListener('click', () => {
+                const hidden = menu.classList.toggle('hidden');
+                toggle.textContent = hidden ? "☰" : "✕";
+            });
+
+            // menu menutup otomatis setelah salah satu link diklik
+            menu.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    menu.classList.add("hidden");
+                    toggle.textContent = "☰";
+                });
+            });
+
             const pengalamanBtn = document.querySelectorAll('.pengalaman-btn');
             const pengalamanCards = document.querySelectorAll('.pengalaman-card');
 

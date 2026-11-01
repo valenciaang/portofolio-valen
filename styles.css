@@ -23,812 +23,821 @@
   }
 }
 
-
 body {
     background-color: var(--bg-color);
     font-family: 'Inter', sans-serif;
 }
 
-/* HEADER */
-
-header {
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-nav {
-    background-color: var(--white-color);
-    position: fixed;
-    top: 2rem;
-    padding: 15px 40px;
-    box-shadow: 0px 4px 30px -5px var(--sec-color);
-    border-radius: 50px;
-    width: fit-content;
-    z-index: 999;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-
-nav ul li {
-    color: var(--main-color);
-    font-size: 1rem;
-    padding: 5px 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-nav ul li a {
-    border-bottom: 1px solid transparent;
-    transition: border-bottom 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-    border-bottom: 1px solid var(--main-color);
-    cursor: pointer;
-}
-
-nav ul li a:visited, nav ul li a:active {
-    color: inherit;
-}
-
-.header-line {
-    width: 100%;
-    height: 2rem;
-    background-color: var(--main-color);
-    color: var(--bg-color);
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    font-weight: 600;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    gap: 2rem;
-}
-
-.header-line p {
-  margin: 0 12px;
-}
-
-#hero-section {
-    padding: 6rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-#hero-section h1 {
-    font-size: 5rem;
-    font-weight: 700;
-    text-align: center;
-    background: linear-gradient(45deg, #7899ff 0%, #1F51DC 51%, #0526B3 100%);
-    background-clip: text;
-    color: transparent;
-}
-
-#hero-section p {
-    font-size: 1rem;
-    color: var(--text-color2);
-}
-
-#hero-section div {
-    display: flex;
-    gap: 15px;
-}
-
-.main-btn {
-    width: fit-content;
-    padding: 15px 40px;
-    border-radius: 100px;
-    background-color: var(--main-color);
-    color: var(--bg-color);
-    border: none;
-    transform: scale(1);
-    transition: transform 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.sec-btn {
-    width: fit-content;
-    padding: 15px 40px;
-    border-radius: 100px;
-    background-color: var(--bg-color);
-    color: var(--main-color);
-    border: 1px solid var(--main-color);
-    transform: scale(1);
-    transition: transform 0.3s ease;
-}
-
-button {
-    font-size: 0.9rem;
-}
-
-.main-btn:hover, .sec-btn:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-
-section {
-    margin: 3rem 0;
-    padding: 0 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-color1);
-}
-
-h2 {
-    font-size: 2rem;
-    color: var(--text-color1);
-}
-
-.text-blue {
-    color: var(--main-color);
-}
-
-.bold {
-    font-weight: 700;
-}
-
-.text-gray {
-    color: var(--gray-color);
-}
-
-.border-blue {
-    border: 1px solid var(--main-color) !important;
-}
-
-.title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-color1);
-}
-
-.title p {
-    color: var(--text-color2);
-}
-
-/* TENTANG SAYA */
-
-#tentang-saya {
-    background-color: var(--bg-color);
-    gap: 4rem;
-}
-
-.polaroid{
-    padding: 2rem 2rem 5rem;
-    background-color: var(--white-color);
-    border: 1px solid var(--gray-color);
-    transform: rotate(-2deg);
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0px 0px 5px 0px var(--gray-color);
-}
-
-.polaroid:hover {
-    transform: rotate(2deg);
-}
-
-#tentang-saya img {
-    width: 300px;
+/* img {
+    max-width: 100%;
     height: auto;
-}
-
-.konten {
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    text-align: justify;
-}
-
-.konten > div {
-    display: flex;
-    gap: 1rem;
-}
-
-.card {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 4px;
-    padding: 20px;
-    background-color: var(--white-color);
-    border: 1px solid var(--gray-color);
-    border-radius: 20px;
-    transform: translateY(0px);
-    transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-2px);
-    border-color: var(--sec-color);
-}
-
-.card p:first-child {
-    color: var(--text-color2);
-    font-size: 0.8rem;
-}
-
-.card p:last-child {
-    font-size: 0.9rem;
-}
-
-/* PENDIDIKAN */
-
-#pendidikan {
-    width: 100%;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.pendidikan-timeline {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    gap: 36px;
-    max-width: 1200px; 
-}
-
-.pendidikan-timeline:before {
-    content: '';
-    position: absolute;
-    top: 61px;
-    left: 25%;
-    right: 25%;
-    height: 3px;
-    background: linear-gradient(90deg, #CBD5E1 0%, var(--main-color) 100%);
-    z-index: -1;
-    border-radius: 4px;
-}
-
-.pendidikan-konten {
-    display: flex;
-}
-
-.pendidikan-item {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.pendidikan-tahun {
-    width: fit-content;
-    background-color: var(--white-color);
-    border: 1px solid var(--gray-color);
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--text-color1);
-    padding: 0.5rem 1rem;
-}
-
-.pendidikan-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50px;
-    background-color: var(--white-color);
-    outline: 5px solid var(--gray-color);
-    transition: all 0.3s ease-in-out;
-}
-
-.pendidikan-dot.active {
-    box-shadow: 0px 0px 5px 10px var(--sec-color);
-    outline-color: var(--white-color) !important;
-}
-
-.pendidikan-card {
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    background-color: var(--white-color);
-    padding: 20px;
-    margin: 0 1,5rem;
-    border: 1px solid var(--gray-color);
-    border-radius: 20px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-}
-
-.pendidikan-item:hover .pendidikan-card {
-    transform: translateY(-5px);
-    border: 1px solid var(--sec-color);
-}
-
-.pendidikan-item:hover .pendidikan-dot {
-    transform: scale(1.2);
-    outline-color: var(--main-color);
-}
-
-.pendidikan-jenjang {
-    width: fit-content;
-    font-size: 0.7rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--fourth-color);
-    color: var(--main-color);
-    border-radius: 50px;
-    font-weight: 500;
-}
-
-.pendidikan-card img {
-    height: 70px;
-    width: auto;
-}
-
-.pendidikan-jurusan {
-    color: var(--main-color);
-    font-weight: 500;
-}
-
-.pendidikan-sub {
-    text-align: justify;
-    color: var(--text-color2);
-}
-
-/* KEAHLIAN */
-
-#keahlian {
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-#keahlian .title {
-    width: 100%;
-    align-items: start;
-}
-
-.keahlian-konten {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 2rem;
-    padding: 1.5rem;
-    background-color: var(--white-color);
-    border: 1px solid var(--gray-color);
-    border-radius: 20px;
-    transform: translateY(0px);
-    transition: transform 0.3s ease-in-out;
-}
-
-.keahlian-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.keahlian-btn {
-    min-width: 20rem;
-    min-height: 3.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    background-color: var(--fourth-color);
-    color: var(--main-color);
-    border: 1px solid var(--gray-color);
-    border-radius: 10px;
-    font-weight: 600;
-}
-
-.keahlian-btn div:first-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--main-color);
-}
-
-.keahlian-btn.active, .active div:first-child, .active {
-    background-color: var(--main-color) !important;
-    color: var(--white-color) !important;
-}
-
-.icon {
-    width: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--main-color);
-    border-radius: 10px;
-    font-size: 1.3rem;
-}
-
-.arrow {
-    color: var(--fourth-color);
-}
-
-.icon img {
-    width: 1.3rem;
-}
-
-#keahlian .card {
-    flex-direction: row;
-}
-
-#keahlian .card > div {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.keahlian-tag {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    flex-grow: 1;
-    align-content: flex-start;
-}
-
-.tag {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    background-color: var(--white-color);
-    color: var(--text-color1);
-    border: 1px solid var(--main-color);
-    border-radius: 50px;
-    padding: 0.7rem 1.2rem;
-    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.tag img {
-    width: 1rem;
-    height: 1rem;
-}
-
-.tag.highlighted {
-    background-color: var(--fourth-color);
-    border-color: var(--main-color);
-    color: var(--main-color);
-    font-weight: 500;
-    transform: scale(1  ) translateY(-1px);
-    box-shadow: 0 2px 10px -1px rgba(22, 66, 213, 0.14);
-    z-index: 2;
-}
-
-.tag.dimmed {
-    opacity: 0.5;
-    transform: scale(0.94);
-    border-color: var(--gray-color);
-    background: #F1F5F9;
-}
-
-/* PENGALAMAN */
-
-.hidden {
-    display: none !important;
-}
-
-#pengalaman {
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.pengalaman-filter {
-    width: 100%;
-    display: flex;
-    gap: 0.5rem;
-}
-
-#pengalaman > div:last-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-
-}
-
-.pengalaman-btn {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    border-radius: 50px;
-    background-color: var(--white-color);
-    border: 1px solid var(--fourth-color);
-    transition: all 0.3s ease-in-out;
-}
-
-.pengalaman-btn:hover {
-    border-color: var(--main-color);
-}
-
-.pengalaman-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.pengalaman-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--white-color);
-    border-radius: 20px;
-    border: 1px solid var(--fourth-color);
-    padding: 20px;
-    gap: 2rem;
-}
-
-.pengalaman-card:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-
-.pengalaman-konten {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.pengalaman-subtitle {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--main-color); 
-    margin-bottom: 12px; 
-}
-
-.pengalaman-deskripsi {
-    font-size: 0.9rem;
-    color: var(--text-color2);
-    text-align: justify;
-}
-
-.pengalaman-tanggal {
-    color: var(--text-color2);
-    font-size: 0.9rem;
-    text-align: right;
-}
-
-.pengalaman-tag-list {
-    display: flex;
-    gap: 1rem;
-}
-
-.pengalaman-tag {
-    background-color: var(--fourth-color); 
-    color: var(--main-color);
-    border: none; 
-    font-size: 0.8rem;
-    font-weight: 500;
-    padding: 6px 14px;
-    border-radius: 50px;
-}
-
-.pengalaman-card > div > img {
-    width: 30rem;
-    border-radius: 20px;
-    border: 1px solid #E2E8F0;
-}
-
-.btn-list {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.btn-link {
-    background-color: var(--main-color);
-    color: var(--white-color);
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 300;
-    width: fit-content;
-    padding: 0.5rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    transform: scale(1);
-    transition: all 0.3s ease-in-out;
-}
-
-.sec-btn-link {
-    background-color: var(--white-color);
-    color: var(--main-color);
-    border: 1px solid var(--main-color);
-}
-
-.btn-link:hover {
-    transform: scale(1.02);
-}
-
-.btn-link img {
-    width: 1.5rem;
-    height: auto;
-}
-
-.btn-link a {
-    font-size: 0.8rem;
-    font-weight: 300;
-    text-decoration: none;
-    color: var(--white-color);
-}
-
-/* KONTAK */
-
-#kontak {
-    display: flex;
-    align-items: stretch;
-    gap: 2rem;
-}
-
-.kontak-info-card {
-    width: 500px;
-    background-color: #1642D5; 
-    color: #FFFFFF;
-    padding: 25px;
-    border-radius: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    height: 100%;
-}
-
-.kontak-info-card h2 {
-    color: #FFFFFF;
-}
-
-.kontak-info-card > div > p {
-    color: #E2E8F0;
-    line-height: 1.6;
-    margin-bottom: 16px;
-}
-
-.kontak-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    background-color: rgba(255, 255, 255, 0.1); 
-    padding: 1rem;
-    border-radius: 16px;
-    text-decoration: none;
-    color: #FFFFFF;
-    transition: all 0.3s ease;
-}
-
-.info-item:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-3px);
-}
-
-.info-item .info-text {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.info-text p:first-child {
-    font-size: 0.8rem;
-    color: #BFDBFE; 
-}
-
-.info-text p:last-child {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.icon-box img {
-    display: flex;
-    align-items: center;
-    width: 2rem;
-    height: auto;
-}
-
-.kontak-form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-form {
-    flex-grow: 1;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-form div {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-form div:nth-of-type(4) {
-    flex-grow: 1;
-}
-
-form div label {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-form div input, form div textarea {
-    font-family: inherit;
-    padding: 1rem;
-    background-color: var(--white-color);
-    border-radius: 50px;
-    border: 1px solid var(--gray-color);
-}
-
-form div textarea {
-    height: 100%;
-    flex-grow: 1;
-    border-radius: 25px;
-    resize: none;
-}
-
-form div input:active, form div input:focus,
-form div textarea:active, form div textarea:focus {
-    outline: none;
-    border-color: var(--third-color);
-}
-
-.form-btn {
-    width: 100%;
-    background-color: var(--main-color);
-    color: var(--white-color);
-    padding: 1rem;
-    border-radius: 100px;
-    border: none;
-}
-
-form > .main-btn {
-    width: 100%;
-}
-
-footer {
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 60px; 
-    border-top: 1px solid var(--gray-color); 
-    background-color: transparent;
-}
-
-footer p {
-    color: var(--text-color2); 
-    font-size: 0.9rem;
-    margin: 5px 0;
-    font-weight: 500;
-}
-
-footer .footer-dev {
-    font-size: 0.8rem;
-    color: var(--main-color); 
+    display: block; 
+} */
+
+@media (min-width: 768px) {
+
+    /* HEADER */
+
+    header {
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav {
+        background-color: var(--white-color);
+        position: fixed;
+        top: 2rem;
+        padding: 15px 40px;
+        box-shadow: 0px 4px 30px -5px var(--sec-color);
+        border-radius: 50px;
+        width: fit-content;
+        z-index: 999;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    nav ul li {
+        color: var(--main-color);
+        font-size: 1rem;
+        padding: 5px 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    nav ul li a {
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+        border-bottom: 1px solid var(--main-color);
+        cursor: pointer;
+    }
+
+    nav ul li a:visited, nav ul li a:active {
+        color: inherit;
+    }
+
+    .header-line {
+        width: 100%;
+        height: 2rem;
+        background-color: var(--main-color);
+        color: var(--bg-color);
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .header-line p {
+    margin: 0 12px;
+    }
+
+    #hero-section {
+        padding: 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #hero-section h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        text-align: center;
+        background: linear-gradient(45deg, #7899ff 0%, #1F51DC 51%, #0526B3 100%);
+        background-clip: text;
+        color: transparent;
+    }
+
+    #hero-section p {
+        font-size: 1rem;
+        color: var(--text-color2);
+    }
+
+    #hero-section div {
+        display: flex;
+        gap: 15px;
+    }
+
+    .main-btn {
+        width: fit-content;
+        padding: 15px 40px;
+        border-radius: 100px;
+        background-color: var(--main-color);
+        color: var(--bg-color);
+        border: none;
+        transform: scale(1);
+        transition: transform 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sec-btn {
+        width: fit-content;
+        padding: 15px 40px;
+        border-radius: 100px;
+        background-color: var(--bg-color);
+        color: var(--main-color);
+        border: 1px solid var(--main-color);
+        transform: scale(1);
+        transition: transform 0.3s ease;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    .main-btn:hover, .sec-btn:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+
+    section {
+        margin: 3rem 0;
+        padding: 0 150px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-color1);
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: var(--text-color1);
+    }
+
+    .text-blue {
+        color: var(--main-color);
+    }
+
+    .bold {
+        font-weight: 700;
+    }
+
+    .text-gray {
+        color: var(--gray-color);
+    }
+
+    .border-blue {
+        border: 1px solid var(--main-color) !important;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-color1);
+    }
+
+    .title p {
+        color: var(--text-color2);
+    }
+
+    /* TENTANG SAYA */
+
+    #tentang-saya {
+        background-color: var(--bg-color);
+        gap: 4rem;
+    }
+
+    .polaroid{
+        padding: 2rem 2rem 5rem;
+        background-color: var(--white-color);
+        border: 1px solid var(--gray-color);
+        transform: rotate(-2deg);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0px 0px 5px 0px var(--gray-color);
+    }
+
+    .polaroid:hover {
+        transform: rotate(2deg);
+    }
+
+    #tentang-saya img {
+        width: 300px;
+        height: auto;
+    }
+
+    .konten {
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: justify;
+    }
+
+    .konten > div {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 4px;
+        padding: 20px;
+        background-color: var(--white-color);
+        border: 1px solid var(--gray-color);
+        border-radius: 20px;
+        transform: translateY(0px);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: translateY(-2px);
+        border-color: var(--sec-color);
+    }
+
+    .card p:first-child {
+        color: var(--text-color2);
+        font-size: 0.8rem;
+    }
+
+    .card p:last-child {
+        font-size: 0.9rem;
+    }
+
+    /* PENDIDIKAN */
+
+    #pendidikan {
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .pendidikan-timeline {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        gap: 36px;
+        max-width: 1200px; 
+    }
+
+    .pendidikan-timeline:before {
+        content: '';
+        position: absolute;
+        top: 61px;
+        left: 25%;
+        right: 25%;
+        height: 3px;
+        background: linear-gradient(90deg, #CBD5E1 0%, var(--main-color) 100%);
+        z-index: -1;
+        border-radius: 4px;
+    }
+
+    .pendidikan-konten {
+        display: flex;
+    }
+
+    .pendidikan-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .pendidikan-tahun {
+        width: fit-content;
+        background-color: var(--white-color);
+        border: 1px solid var(--gray-color);
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--text-color1);
+        padding: 0.5rem 1rem;
+    }
+
+    .pendidikan-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50px;
+        background-color: var(--white-color);
+        outline: 5px solid var(--gray-color);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .pendidikan-dot.active {
+        box-shadow: 0px 0px 5px 10px var(--sec-color);
+        outline-color: var(--white-color) !important;
+    }
+
+    .pendidikan-card {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        background-color: var(--white-color);
+        padding: 20px;
+        margin: 0 1.5rem;
+        border: 1px solid var(--gray-color);
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .pendidikan-item:hover .pendidikan-card {
+        transform: translateY(-5px);
+        border: 1px solid var(--sec-color);
+    }
+
+    .pendidikan-item:hover .pendidikan-dot {
+        transform: scale(1.2);
+        outline-color: var(--main-color);
+    }
+
+    .pendidikan-jenjang {
+        width: fit-content;
+        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+        background-color: var(--fourth-color);
+        color: var(--main-color);
+        border-radius: 50px;
+        font-weight: 500;
+    }
+
+    .pendidikan-card img {
+        height: 70px;
+        width: auto;
+    }
+
+    .pendidikan-jurusan {
+        color: var(--main-color);
+        font-weight: 500;
+    }
+
+    .pendidikan-sub {
+        text-align: justify;
+        color: var(--text-color2);
+    }
+
+    /* KEAHLIAN */
+
+    #keahlian {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #keahlian .title {
+        width: 100%;
+        align-items: start;
+    }
+
+    .keahlian-konten {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 1.5rem;
+        background-color: var(--white-color);
+        border: 1px solid var(--gray-color);
+        border-radius: 20px;
+        transform: translateY(0px);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .keahlian-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .keahlian-btn {
+        min-width: 20rem;
+        min-height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        background-color: var(--fourth-color);
+        color: var(--main-color);
+        border: 1px solid var(--gray-color);
+        border-radius: 10px;
+        font-weight: 600;
+    }
+
+    .keahlian-btn div:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--main-color);
+    }
+
+    .keahlian-btn.active, .active div:first-child, .active {
+        background-color: var(--main-color) !important;
+        color: var(--white-color) !important;
+    }
+
+    .icon {
+        width: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--main-color);
+        border-radius: 10px;
+        font-size: 1.3rem;
+    }
+
+    .arrow {
+        color: var(--fourth-color);
+    }
+
+    .icon img {
+        width: 1.3rem;
+    }
+
+    #keahlian .card {
+        flex-direction: row;
+    }
+
+    #keahlian .card > div {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .keahlian-tag {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        flex-grow: 1;
+        align-content: flex-start;
+    }
+
+    .tag {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background-color: var(--white-color);
+        color: var(--text-color1);
+        border: 1px solid var(--main-color);
+        border-radius: 50px;
+        padding: 0.7rem 1.2rem;
+        transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .tag img {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .tag.highlighted {
+        background-color: var(--fourth-color);
+        border-color: var(--main-color);
+        color: var(--main-color);
+        font-weight: 500;
+        transform: scale(1  ) translateY(-1px);
+        box-shadow: 0 2px 10px -1px rgba(22, 66, 213, 0.14);
+        z-index: 2;
+    }
+
+    .tag.dimmed {
+        opacity: 0.5;
+        transform: scale(0.94);
+        border-color: var(--gray-color);
+        background: #F1F5F9;
+    }
+
+    /* PENGALAMAN */
+
+    .hidden {
+        display: none !important;
+    }
+
+    #pengalaman {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .pengalaman-filter {
+        width: 100%;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    #pengalaman > div:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+    }
+
+    .pengalaman-btn {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border-radius: 50px;
+        background-color: var(--white-color);
+        border: 1px solid var(--fourth-color);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .pengalaman-btn:hover {
+        border-color: var(--main-color);
+    }
+
+    .pengalaman-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .pengalaman-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--white-color);
+        border-radius: 20px;
+        border: 1px solid var(--fourth-color);
+        padding: 20px;
+        gap: 2rem;
+    }
+
+    .pengalaman-card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+
+    .pengalaman-konten {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .pengalaman-subtitle {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--main-color); 
+        margin-bottom: 12px; 
+    }
+
+    .pengalaman-deskripsi {
+        font-size: 0.9rem;
+        color: var(--text-color2);
+        text-align: justify;
+    }
+
+    .pengalaman-tanggal {
+        color: var(--text-color2);
+        font-size: 0.9rem;
+        text-align: right;
+    }
+
+    .pengalaman-tag-list {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .pengalaman-tag {
+        background-color: var(--fourth-color); 
+        color: var(--main-color);
+        border: none; 
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 6px 14px;
+        border-radius: 50px;
+    }
+
+    .pengalaman-card > div > img {
+        width: 30rem;
+        border-radius: 20px;
+        border: 1px solid #E2E8F0;
+    }
+
+    .btn-list {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .btn-link {
+        background-color: var(--main-color);
+        color: var(--white-color);
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 300;
+        width: fit-content;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        transform: scale(1);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .sec-btn-link {
+        background-color: var(--white-color);
+        color: var(--main-color);
+        border: 1px solid var(--main-color);
+    }
+
+    .btn-link:hover {
+        transform: scale(1.02);
+    }
+
+    .btn-link img {
+        width: 1.5rem;
+        height: auto;
+    }
+
+    .btn-link a {
+        font-size: 0.8rem;
+        font-weight: 300;
+        text-decoration: none;
+        color: var(--white-color);
+    }
+
+    /* KONTAK */
+
+    #kontak {
+        display: flex;
+        align-items: stretch;
+        gap: 2rem;
+    }
+
+    .kontak-info-card {
+        width: 500px;
+        background-color: #1642D5; 
+        color: #FFFFFF;
+        padding: 25px;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        height: 100%;
+    }
+
+    .kontak-info-card h2 {
+        color: #FFFFFF;
+    }
+
+    .kontak-info-card > div > p {
+        color: #E2E8F0;
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+
+    .kontak-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        background-color: rgba(255, 255, 255, 0.1); 
+        padding: 1rem;
+        border-radius: 16px;
+        text-decoration: none;
+        color: #FFFFFF;
+        transition: all 0.3s ease;
+    }
+
+    .info-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-3px);
+    }
+
+    .info-item .info-text {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .info-text p:first-child {
+        font-size: 0.8rem;
+        color: #BFDBFE; 
+    }
+
+    .info-text p:last-child {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .icon-box img {
+        display: flex;
+        align-items: center;
+        width: 2rem;
+        height: auto;
+    }
+
+    .kontak-form {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    form {
+        flex-grow: 1;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    form div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    form div:nth-of-type(4) {
+        flex-grow: 1;
+    }
+
+    form div label {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    form div input, form div textarea {
+        font-family: inherit;
+        padding: 1rem;
+        background-color: var(--white-color);
+        border-radius: 50px;
+        border: 1px solid var(--gray-color);
+    }
+
+    form div textarea {
+        height: 100%;
+        flex-grow: 1;
+        border-radius: 25px;
+        resize: none;
+    }
+
+    form div input:active, form div input:focus,
+    form div textarea:active, form div textarea:focus {
+        outline: none;
+        border-color: var(--third-color);
+    }
+
+    .form-btn {
+        width: 100%;
+        background-color: var(--main-color);
+        color: var(--white-color);
+        padding: 1rem;
+        border-radius: 100px;
+        border: none;
+    }
+
+    form > .main-btn {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px 20px;
+        margin-top: 60px; 
+        border-top: 1px solid var(--gray-color); 
+        background-color: transparent;
+    }
+
+    footer p {
+        color: var(--text-color2); 
+        font-size: 0.9rem;
+        margin: 5px 0;
+        font-weight: 500;
+    }
+
+    footer .footer-dev {
+        font-size: 0.8rem;
+        color: var(--main-color); 
+    }
 }
