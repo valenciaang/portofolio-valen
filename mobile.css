@@ -109,7 +109,7 @@ nav ul li a:visited, nav ul li a:active {
 }
 
 #hero-section {
-    padding: 3rem 1rem;
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -197,7 +197,7 @@ button {
 
 section {
     margin: 3rem 0;
-    padding: 0 1rem;
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -306,6 +306,10 @@ h2 {
 }
 
 @media (min-width: 768px) {
+    p {
+        font-size: 1rem;
+    }
+
     nav {
         left: auto;
         right: auto;
@@ -350,15 +354,37 @@ h2 {
 
     .header-line p {
         margin: 0 12px;
+        font-size: 0.7rem;
     }
 
     section {
-        margin: 3rem 0;
-        padding: 0 150px;
+        padding: 0 9rem;
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        color: var(--text-color1);
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #tentang-saya {
+        gap: 4rem;
+    }
+
+    .polaroid{
+        padding: 2rem 2rem 5rem;
+    }
+
+    #tentang-saya img {
+        width: 300px;
+        height: auto;
+    }
+
+    .card p:first-child {
+        font-size: 0.8rem;
+    }
+
+    .card p:last-child {
+        font-size: 0.9rem;
     }
 }
