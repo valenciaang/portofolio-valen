@@ -241,7 +241,7 @@ h2 {
 /* TENTANG SAYA */
 #tentang-saya {
     background-color: var(--bg-color);
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .polaroid{
@@ -378,7 +378,7 @@ h2 {
 
 .pendidikan-dot.active {
     box-shadow: 0px 0px 5px 10px var(--sec-color);
-    outline-color: var(--main-color) !important;
+    outline-color: var(--white-color) !important;
 }
 
 .pendidikan-card {
@@ -430,6 +430,138 @@ h2 {
 .pendidikan-sub {
     text-align: justify;
     color: var(--text-color2);
+}
+
+/* KEAHLIAN */
+
+#keahlian {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#keahlian .title {
+    width: 100%;
+    align-items: start;
+}
+
+.keahlian-konten {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--white-color);
+    border: 1px solid var(--gray-color);
+    border-radius: 20px;
+}
+
+.keahlian-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.keahlian-btn {
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: var(--fourth-color);
+    color: var(--main-color);
+    border: 1px solid var(--gray-color);
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.keahlian-btn div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--main-color);
+}
+
+.keahlian-btn.active, .active div:first-child, .active {
+    background-color: var(--main-color) !important;
+    color: var(--white-color) !important;
+}
+
+.icon {
+    font-weight: 100;
+    width: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    border-radius: 10px;
+    font-size: 1.3rem;
+}
+
+.arrow {
+    color: var(--fourth-color);
+    transform: rotate(90deg);
+}
+
+.icon img {
+    width: 1.3rem;
+}
+
+#keahlian .card {
+    flex-direction: row;
+}
+
+#keahlian .card > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.keahlian-tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    flex-grow: 1;
+    align-content: flex-start;
+}
+
+.tag {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--white-color);
+    color: var(--text-color1);
+    border: 1px solid var(--main-color);
+    border-radius: 50px;
+    padding: 0.7rem 0.8rem;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tag img {
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.tag.highlighted {
+    background-color: var(--fourth-color);
+    border-color: var(--main-color);
+    color: var(--main-color);
+    font-weight: 500;
+    transform: scale(1  ) translateY(-1px);
+    box-shadow: 0 2px 10px -1px rgba(22, 66, 213, 0.14);
+    z-index: 2;
+}
+
+.tag.dimmed {
+    opacity: 0.5;
+    transform: scale(0.94);
+    border-color: var(--gray-color);
+    background: #F1F5F9;
 }
 
 
@@ -559,5 +691,39 @@ h2 {
     .pendidikan-card img {
         height: 70px;
         width: auto;
+    }
+
+    .keahlian-konten {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .keahlian-btn {
+        min-width: 20rem;
+        min-height: 3.5rem;
+    }
+
+    .icon {
+        width: 2rem;
+    }
+
+    .arrow {
+        transform: rotate(0deg);
+    }
+
+    .keahlian-tag {
+        gap: 1rem;
+    }
+
+    .tag {
+        padding: 0.7rem 1.2rem;
+    }
+
+    .tag img {
+        width: 1rem;
+        height: 1rem;
     }
 }
