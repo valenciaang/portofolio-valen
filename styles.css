@@ -197,7 +197,7 @@ button {
 
 section {
     margin: 3rem 0;
-    padding: 0 2rem;
+    padding: 0 10vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -323,18 +323,22 @@ h2 {
     width: 100%;
 }
 
-.pendidikan-timeline:before {
+.pendidikan-item:first-child {
+    position: relative;
+}
+
+.pendidikan-item:first-child::before {
     content: '';
     position: absolute;
-    top: 1rem;
-    bottom: 0;
-    left: 0.2rem;
+    left: 0.2rem; 
+    top: 12px; 
+    bottom: -1.5rem; 
     width: 3px;
-    height: 20rem;
-    background: linear-gradient(90deg, #CBD5E1 0%, var(--main-color) 100%);
-    z-index: -1;
+    background: linear-gradient(180deg, #CBD5E1 0%, var(--main-color) 100%);
+    z-index: -99;
     border-radius: 4px;
 }
+
 
 .pendidikan-konten {
     display: flex;
@@ -880,6 +884,126 @@ footer .footer-dev {
 }
 
 @media (min-width: 768px) {
+    nav {
+        left: auto;
+        right: auto;
+        padding: 1rem 2rem;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    #nav-menu.hidden {
+        display: flex !important;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    nav:has(#nav-menu:not(.hidden))  {
+        left: auto;
+        right: auto;
+        border-radius: 50px;
+        padding: 1rem 3rem;
+    }
+
+    #hero-section {
+        padding: 6rem;
+    }
+
+    #hero-section h1 {
+        font-size: 5rem;
+    }
+
+    .header-line {
+        font-size: 0.75rem;
+        gap: 2rem;
+    }
+
+    .header-line p {
+        margin: 0 12px;
+        font-size: 0.7rem;
+    }
+
+    section {
+        padding: 0 10vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #tentang-saya {
+        gap: 4rem;
+    }
+
+    .polaroid{
+        padding: 2rem 2rem 5rem;
+    }
+
+        .pendidikan-timeline {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .pendidikan-item:first-child::before {
+        display: none;
+    }
+
+    .pendidikan-timeline:before {
+        content: '';
+        position: absolute;
+        top: 0.3rem;
+        left: 25%;
+        right: 25%;
+        height: 3px;
+        width: auto;
+        background: linear-gradient(90deg, #CBD5E1 0%, var(--main-color) 100%);
+        border-radius: 4px;
+        z-index: -99;
+    }
+
+    .pendidikan-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .pendidikan-left {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .pendidikan-tahun {
+        font-size: 0.8rem;
+    }
+
+    .pendidikan-card {
+        margin: 0;
+    }
+
+    .pendidikan-jenjang {
+        font-size: 0.7rem;
+        }
+
+    .pendidikan-card img {
+        height: 70px;
+        width: auto;
+    }
+}
+
+@media (min-width: 900px) {
     p {
         font-size: 1rem;
     }
@@ -932,7 +1056,7 @@ footer .footer-dev {
     }
 
     section {
-        padding: 0 9rem;
+        padding: 0 10vw;
         display: flex;
         flex-direction: row;
     }
@@ -949,17 +1073,17 @@ footer .footer-dev {
         padding: 2rem 2rem 5rem;
     }
 
-    #tentang-saya img {
-        width: 300px;
-        height: auto;
-    }
-
     .card p:first-child {
         font-size: 0.8rem;
     }
 
     .card p:last-child {
         font-size: 0.9rem;
+    } 
+
+    #tentang-saya img {
+        width: 300px;
+        height: auto;
     }
 
     .pendidikan-timeline {
@@ -968,13 +1092,21 @@ footer .footer-dev {
         gap: 1rem;
     }
 
+    .pendidikan-item:first-child::before {
+        display: none;
+    }
+
     .pendidikan-timeline:before {
+        content: '';
         position: absolute;
-        top: 0.3rem;
+        top: 0.3rem; /* Pas di tengah dot desktop */
         left: 25%;
         right: 25%;
         height: 3px;
         width: auto;
+        background: linear-gradient(90deg, #CBD5E1 0%, var(--main-color) 100%);
+        border-radius: 4px;
+        z-index: -99;
     }
 
     .pendidikan-item {
@@ -1005,40 +1137,6 @@ footer .footer-dev {
     .pendidikan-card img {
         height: 70px;
         width: auto;
-    }
-
-    .keahlian-konten {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 2rem;
-        padding: 1.5rem;
-    }
-
-    .keahlian-btn {
-        min-width: 20rem;
-        min-height: 3.5rem;
-    }
-
-    .icon {
-        width: 2rem;
-    }
-
-    .arrow {
-        transform: rotate(0deg);
-    }
-
-    .keahlian-tag {
-        gap: 1rem;
-    }
-
-    .tag {
-        padding: 0.7rem 1.2rem;
-    }
-
-    .tag img {
-        width: 1rem;
-        height: 1rem;
     }
 
     .pengalaman-filter {
@@ -1128,5 +1226,41 @@ footer .footer-dev {
         display: flex;
         flex-direction: column;
         gap: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .keahlian-konten {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .keahlian-btn {
+        min-width: 20rem;
+        min-height: 3.5rem;
+    }
+
+    .icon {
+        width: 2rem;
+    }
+
+    .arrow {
+        transform: rotate(0deg);
+    }
+
+    .keahlian-tag {
+        gap: 1rem;
+    }
+
+    .tag {
+        padding: 0.7rem 1.2rem;
+    }
+
+    .tag img {
+        width: 1rem;
+        height: 1rem;
     }
 }
